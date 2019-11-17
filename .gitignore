@@ -1,0 +1,8 @@
+.snakemake
+archibald
+seq-resources
+ftp*
+.DS_Store
+*fastq
+*fq
+work/
