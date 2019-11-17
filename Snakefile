@@ -340,6 +340,8 @@ rule make_bigwigs:
         "{s}.rpkm.bw"
     conda:
         "envs/deeptools.yaml"
+    singularity:
+        "docker://quay.io/biocontainers/deeptools:3.3.1--py_0"
     shell:
         "bamCoverage -b {input.crm} "
         "--Offset 4 6 --outFileName {output} "
