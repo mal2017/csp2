@@ -27,43 +27,41 @@ samples:
       r1:
         #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR105/004/SRR1057274/SRR1057274.fastq.gz
         - /home/mlawlor/Downloads/SRR1057274.fastq.gz
-  RPMI8402_H3K27AC_01:
-    phred: 33
-    condition:
-        - TALL
-        - line
-    fastq:
-      r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR152/004/SRR1522114/SRR1522114.fastq.gz
-  MOLT3_H3K27AC_01:
-    phred: 33
-    input: MOLT3_WCE_01
-    condition:
-        - TALL
-        - line
-    fastq:
-      r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/006/SRR1603656/SRR1603656.fastq.gz
-  CCRFCEM_H3K27AC_01:
-    phred: 33
-    input: CCRFCEM_WCE_01
-    condition:
-      - TALL
-      - line
-    fastq:
-      r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/000/SRR3098550/SRR3098550.fastq.gz
-  MOLT4_H3K27AC_01:
-    phred: 33
-    input:
-    condition:
-      - TALL
-      - line
-    fastq:
-      r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/009/SRR3098559/SRR3098559.fastq.gz
-
-
+  # RPMI8402_H3K27AC_01:
+  #   phred: 33
+  #   condition:
+  #       - TALL
+  #       - line
+  #   fastq:
+  #     r1:
+  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR152/004/SRR1522114/SRR1522114.fastq.gz
+  # MOLT3_H3K27AC_01:
+  #   phred: 33
+  #   input: MOLT3_WCE_01
+  #   condition:
+  #       - TALL
+  #       - line
+  #   fastq:
+  #     r1:
+  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/006/SRR1603656/SRR1603656.fastq.gz
+  # CCRFCEM_H3K27AC_01:
+  #   phred: 33
+  #   input: CCRFCEM_WCE_01
+  #   condition:
+  #     - TALL
+  #     - line
+  #   fastq:
+  #     r1:
+  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/000/SRR3098550/SRR3098550.fastq.gz
+  # MOLT4_H3K27AC_01:
+  #   phred: 33
+  #   input:
+  #   condition:
+  #     - TALL
+  #     - line
+  #   fastq:
+  #     r1:
+  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/009/SRR3098559/SRR3098559.fastq.gz
 
 input_samples:
   JURKAT_WCE_01:
@@ -72,18 +70,18 @@ input_samples:
       r1:
         #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR105/006/SRR1057276/SRR1057276.fastq.gz
         - /home/mlawlor/Downloads/SRR1057276.fastq.gz
-  MOLT3_WCE_01:
-    phred: 33
-      fastq:
-        r1:
-          - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/007/SRR1603657/SRR1603657.fastq.gz
-  CCRFCEM_WCE_01:
-    phred: 33
-      fastq:
-        r1:
-          - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/008/SRR4245518/SRR4245518.fastq.gz
-  MOLT4_WCE_01:
-    phred: 33
-      fastq:
-        r1:
-          - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/002/SRR4245522/SRR4245522.fastq.gz
+  # MOLT3_WCE_01:
+  #   phred: 33
+  #     fastq:
+  #       r1:
+  #         - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/007/SRR1603657/SRR1603657.fastq.gz
+  # CCRFCEM_WCE_01:
+  #   phred: 33
+  #     fastq:
+  #       r1:
+  #         - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/008/SRR4245518/SRR4245518.fastq.gz
+  # MOLT4_WCE_01:
+  #   phred: 33
+  #     fastq:
+  #       r1:
+  #         - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/002/SRR4245522/SRR4245522.fastq.gz
