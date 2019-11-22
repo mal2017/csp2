@@ -68,6 +68,9 @@ rule target:
 # ------------------------------------------------------------------------------
 
 rule concat_fqs:
+    """
+    Concatenate fastqs for samples with multiple fqs.
+    """
     input:
         lambda wc: [determine_resource(x) for x in RUNS[wc.s]["fastq"][wc.end]]
     output:
@@ -108,6 +111,9 @@ def get_proper_ended_fastp_out(x):
         return "--out1 {r1} --out2 {r2}".format(r1=fqs[0].format(s=x), r2=fqs[1].format(s=x))
 
 rule trim_se:
+    """
+    Trim single-end fastqs with fastp.
+    """
     input:
         fq = lambda wc: get_fqs_for_trim(wc.s),
     output:
@@ -130,6 +136,9 @@ rule trim_se:
         "-w {threads} -L -R {wildcards.s}_fastp"
 
 rule trim_pe:
+    """
+    Trim paired-end fastqs with fastp.
+    """
     input:
         fq = lambda wc: get_fqs_for_trim(wc.samp)
     output:
@@ -185,6 +194,9 @@ rule align_bt2:
         "-x {params.idx_pfx} {params.reads} -S {output}"
 
 rule raw_to_cram:
+    """
+    Convert alignments in sam format to cram.
+    """
     input:
         crm = rules.align_bt2.output,
         fa=genome_fa,
@@ -333,6 +345,9 @@ rule call_peaks:
 # ------------------------------------------------------------------------------
 
 rule make_bigwigs:
+    """
+    Generate rpkm-normalized bigwigs from filtered bams.
+    """
     input:
         crm="{s}.clean.cram",
         crai="{s}.clean.cram.crai"
@@ -358,6 +373,9 @@ rule make_bigwigs:
 # ------------------------------------------------------------------------------
 
 rule index_cram:
+    """
+    Create a *.crai for fast random access of your cram files.
+    """
     input:
         "{file}.cram"
     output:
@@ -370,6 +388,9 @@ rule index_cram:
         "samtools index {input}"
 
 rule index_bam:
+    """
+    Create a *.bai for fast random access of your cram files.
+    """
     input:
         "{file}.bam"
     output:
