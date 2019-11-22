@@ -50,7 +50,7 @@ google cloud, amazon aws (if you have appropriately configured amazon or google
 accounts). The most frequent use-case would be providing a path to a fastq
 on ENA's ftp server. If you have trouble with this note that ENA has technical
 difficulty on occasion, so it may make sense to try again later before trying
-more intese debugging.
+more intense debugging.
 
 Multiple fastqs can be automatically concatenated per sample - just be aware that
 the order for paired-end fastqs must be conserved for each read pair.
@@ -67,16 +67,21 @@ the name of each input library for each ChIP.
 ```
 
 The template config.yaml file provided in the repo points to bowtie2 indices
-and genome files hosted in a private google cloud bucket. All of these indices
-are available in compressed archives on the
+and genome files hosted in a private google cloud bucket, which I will likely keep
+private for a while because it costs me money to ingress/egress data.
+However the exact same indices are publically available in compressed archives on the
 [bowtie2 website](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml).
-The corresponding fasta files can be derived from the indices with the following
+The corresponding required fasta files can be derived from the indices with the following
 commands:
 
 ```bash
 bowtie2-inspect {index_prefix} | bgzip -c -i > genome.fa.gz
 samtools faidx genome.fa.gz
 ```
+
+Once you have extracted the indices and reconsituted the genome fasta just modify
+the config file to point to your local copies.
+
 
 ## to get help
 
