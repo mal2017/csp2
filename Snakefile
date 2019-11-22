@@ -431,7 +431,7 @@ rule nsort_cram:
         fai=genome_fai,
         gzi=genome_gzi,
     output:
-        "{file}.nsrt.cram"
+        temp("{file}.nsrt.cram")
     conda:
         "envs/samtools.yaml"
     singularity:
