@@ -1,0 +1,31 @@
+{
+    "__default__" :
+    {
+        "account" : "mal456",
+        "partition" : "main",
+        "time" : "4:00:00",
+        "n" : 1,
+        "tasks" : 1,
+        "cpus" : 4,
+        "mem" : 8000,
+        "export" : "ALL"
+    },
+    "align_bt2" :
+    {
+        "mem" : 20000,
+        "time" : "8:00:00",
+        "cpus" : 8,
+    },
+    "call_footprints" :
+    {
+        "mem" : 20000,
+        "time" : "12:00:00",
+        "cpus" : 8,
+    },
+    "make_bigwigs" :
+    {
+        "mem" : 20000,
+        "time" : "12:00:00",
+        "cpus" : 8,
+    },
+}

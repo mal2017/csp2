@@ -1,17 +1,17 @@
-genome: NCBI-hg38
+genome: UCSC-hg19
 BT2_FILES:
-  - gs://seq-resources/UCSC-hg19/hg19.1.bt2
-  - gs://seq-resources/UCSC-hg19/hg19.2.bt2
-  - gs://seq-resources/UCSC-hg19/hg19.3.bt2
-  - gs://seq-resources/UCSC-hg19/hg19.4.bt2
-  - gs://seq-resources/UCSC-hg19/hg19.rev.1.bt2
-  - gs://seq-resources/UCSC-hg19/hg19.rev.2.bt2
+  - /scratch/mal456/csp2/data/hg19.1.bt2
+  - /scratch/mal456/csp2/data/hg19.2.bt2
+  - /scratch/mal456/csp2/data/hg19.3.bt2
+  - /scratch/mal456/csp2/data/hg19.4.bt2
+  - /scratch/mal456/csp2/data/hg19.rev.1.bt2
+  - /scratch/mal456/csp2/data/hg19.rev.2.bt2
 
-BT2_IDX_PFX: seq-resources/UCSC-hg19/hg19 # prefix of your bt2 indices
-GENOME_FA: gs://seq-resources/UCSC-hg19/ucsc-hg19.fa.gz
-GENOME_FAI: gs://seq-resources/UCSC-hg19/ucsc-hg19.fa.gz.fai
-GENOME_GZI: gs://seq-resources/UCSC-hg19/ucsc-hg19.fa.gz.gzi
-GENOME_BL: gs://seq-resources/UCSC-hg19/ENCFF001TDO.bed.gz
+BT2_IDX_PFX: /scratch/mal456/csp2/data/hg19 # prefix of your bt2 indices
+GENOME_FA: /scratch/mal456/csp2/data/UCSC-hg19_ucsc-hg19.fa.gz
+GENOME_FAI: /scratch/mal456/csp2/data/UCSC-hg19_ucsc-hg19.fa.gz.fai
+GENOME_GZI: /scratch/mal456/csp2/data/UCSC-hg19_ucsc-hg19.fa.gz.gzi
+GENOME_BL: /scratch/mal456/csp2/data/UCSC-hg19_ENCFF001TDO.bed.gz
 GENOME_SIZE: 2.7e9
 GENOME_CHR: chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX
 MAPQ_CUTOFF: 30
@@ -25,92 +25,81 @@ samples:
       - line
     fastq:
       r1:
-        - ~/Downloads/SRR1522114.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1522114.fastq.gz
       #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR152/004/SRR1522114/SRR1522114.fastq.gz
-  # JURKAT_H3K27AC_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_01
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR105/004/SRR1057274/SRR1057274.fastq.gz
-  #       - /home/mlawlor/Downloads/SRR1057274.fastq.gz
-  # MOLT3_H3K27AC_01:
-  #   phred: 33
-  #   input: MOLT3_WCE_01
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/006/SRR1603656/SRR1603656.fastq.gz
-  # CCRFCEM_H3K27AC_01:
-  #   phred: 33
-  #   input: CCRFCEM_WCE_01
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/000/SRR3098550/SRR3098550.fastq.gz
-  # MOLT4_H3K27AC_01:
-  #   phred: 33
-  #   input: MOLT4_WCE_01
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/009/SRR3098559/SRR3098559.fastq.gz
-  # JURKAT_TAL1_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_02
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443847/SRR443847.fastq.gz
-  # JURKAT_TCF12_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_02
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443849/SRR443849.fastq.gz
-  #
-  # JURKAT_TCF3_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_02
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443850/SRR443850.fastq.gz
-  #
-  # JURKAT_GATA3_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_02
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443851/SRR443851.fastq.gz
-  # JURKAT_RUNX1_01:
-  #   phred: 33
-  #   input: JURKAT_WCE_02
-  #   condition:
-  #     - TALL
-  #     - line
-  #   fastq:
-  #     r1:
-  #       - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443853/SRR443853.fastq.gz
+  JURKAT_H3K27AC_01:
+    phred: 33
+    input: JURKAT_WCE_01
+    condition:
+      - TALL
+      - line
+    fastq:
+      r1:
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR105/004/SRR1057274/SRR1057274.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1057274.fastq.gz
+  MOLT3_H3K27AC_01:
+    phred: 33
+    input: MOLT3_WCE_01
+    condition:
+      - TALL
+      - line
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR1603656.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/006/SRR1603656/SRR1603656.fastq.gz
+  CCRFCEM_H3K27AC_01:
+    phred: 33
+    input: CCRFCEM_WCE_01
+    condition:
+      - TALL
+      - line
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR3098550.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/000/SRR3098550/SRR3098550.fastq.gz
+  MOLT4_H3K27AC_01:
+    phred: 33
+    input: MOLT4_WCE_01
+    condition:
+      - TALL
+      - line
+    fastq:
+      r1:
+        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR309/009/SRR3098559/SRR3098559.fastq.gz
+  H3K27ac_ab4729_KOPT1_052616:
+    input: KOPTK1_Input_052616
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR4250311.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR425/001/SRR4250311/SRR4250311.fastq.gz
+  H3K27ac_ChIPseq_in_KOPTK1:
+    input: Whole_Cell_Extracts_in_KOPTK
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR1143136.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143137.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143138.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143139.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143140.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/006/SRR1143136/SRR1143136.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/007/SRR1143137/SRR1143137.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/008/SRR1143138/SRR1143138.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/009/SRR1143139/SRR1143139.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/000/SRR1143140/SRR1143140.fastq.gz
+  Broad_ChipSeq_Dnd41_H3K27ac:
+    input: Broad_ChipSeq_Dnd41_Input
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR568221.fastq.gz
+        - /scratch/mal456/csp2/data/SRR568222.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR568/SRR568221/SRR568221.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR568/SRR568222/SRR568222.fastq.gz
+  CUTLL1_H3K27ac_rep1:
+      input: CUTLL1_input
+      fastq:
+        r1:
+          - /scratch/mal456/csp2/data/SRR9822168.fastq.gz
+          #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR982/008/SRR9822168/SRR9822168.fastq.gz
 
 input_samples:
   JURKAT_WCE_01:
@@ -118,24 +107,70 @@ input_samples:
     fastq:
       r1:
         #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR105/006/SRR1057276/SRR1057276.fastq.gz
-        - /home/mlawlor/Downloads/SRR1057276.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1057276.fastq.gz
   MOLT3_WCE_01:
     phred: 33
     fastq:
       r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/007/SRR1603657/SRR1603657.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1603657.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/007/SRR1603657/SRR1603657.fastq.gz
   CCRFCEM_WCE_01:
     phred: 33
     fastq:
       r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/008/SRR4245518/SRR4245518.fastq.gz
+        - /scratch/mal456/csp2/data/SRR4245518.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/008/SRR4245518/SRR4245518.fastq.gz
   MOLT4_WCE_01:
     phred: 33
     fastq:
       r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/002/SRR4245522/SRR4245522.fastq.gz
+        - /scratch/mal456/csp2/data/SRR4245522.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/002/SRR4245522/SRR4245522.fastq.gz
   JURKAT_WCE_02:
     phred: 33
     fastq:
       r1:
-        - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443856/SRR443856.fastq.gz
+        - /scratch/mal456/csp2/data/SRR443856.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR443/SRR443856/SRR443856.fastq.gz
+  KOPTK1_Input_052616:
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR4245520.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR424/000/SRR4245520/SRR4245520.fastq.gz
+  Whole_Cell_Extracts_in_KOPTK:
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR1143161.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143162.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143163.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143164.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143165.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143166.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143167.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143168.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143169.fastq.gz
+        - /scratch/mal456/csp2/data/SRR1143170.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/001/SRR1143161/SRR1143161.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/002/SRR1143162/SRR1143162.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/003/SRR1143163/SRR1143163.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/004/SRR1143164/SRR1143164.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/005/SRR1143165/SRR1143165.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/006/SRR1143166/SRR1143166.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/007/SRR1143167/SRR1143167.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/008/SRR1143168/SRR1143168.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/009/SRR1143169/SRR1143169.fastq.gz
+        # - ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR114/000/SRR1143170/SRR1143170.fastq.gz
+  Broad_ChipSeq_Dnd41_Input:
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR568407.fastq.gz
+        - /scratch/mal456/csp2/data/SRR568408.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR568/SRR568407/SRR568407.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR568/SRR568408/SRR568408.fastq.gz
+  CUTLL1_input:
+    fastq:
+      r1:
+        - /scratch/mal456/csp2/data/SRR9822161.fastq.gz
+        - /scratch/mal456/csp2/data/SRR9822162.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR982/001/SRR9822161/SRR9822161.fastq.gz
+        #- ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR982/002/SRR9822162/SRR9822162.fastq.gz
